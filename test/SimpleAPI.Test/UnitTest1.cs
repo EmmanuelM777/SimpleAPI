@@ -11,8 +11,9 @@ namespace SimpleAPI.Test
         [Fact]
         public void GetShouldReturnExpectedValue()
         {
-            var result = valuesController.Get(1);
-            Assert.Equal("value", result.Value);
+            const int id = 1;
+            var result = valuesController.Get(id);
+            Assert.Equal($"value {id}", result.Value);
         }
     }
 }
